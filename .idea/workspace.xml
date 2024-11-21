@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebc86181-e850-4540-a42d-f7beafa747d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/redesocial/modelo/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/redesocial/modelo/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/redesocial/gerenciador/GerenciadorUsuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/redesocial/modelo/Comentario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/redesocial/modelo/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/redesocial/modelo/Post.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2p2deHlVlYEHuvLsD9hcu7795b4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,7 +40,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pc/Documents/Sistema-rede-social"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

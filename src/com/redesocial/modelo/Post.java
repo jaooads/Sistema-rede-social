@@ -77,17 +77,39 @@ public class Post {
     public String toString() {
         return
                 "Id: " + id +
-                "Autor: " + autor +
-                "Conteudo: " + conteudo + '\'' +
-                "DataPublicacao: " + dataPublicacao +
-                "Curtidas: " + curtidas +
-                "Comentarios: " + comentarios ;
+                        "Autor: " + autor +
+                        "Conteudo: " + conteudo + '\'' +
+                        "DataPublicacao: " + dataPublicacao +
+                        "Curtidas: " + curtidas +
+                        "Comentarios: " + comentarios;
     }
 
 
     public boolean adicionarCurtida(Usuario usuario) {
-        //Lista de Post
 
+        if (!curtidas.contains(usuario)) {
+            curtidas.add(usuario);
+            return true;
+        }
+        return false;
     }
+
+    public boolean removerCurtida(Usuario usuario) {
+        if (curtidas.contains(usuario)) {
+            curtidas.remove(usuario);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean adicionarComentario(Comentario comentario) {
+
+        if (comentario != null) {
+            comentarios.add(comentario);
+            return true;
+        }
+        return false;
+    }
+
 
 }
