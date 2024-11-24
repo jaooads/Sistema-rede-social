@@ -19,4 +19,6 @@ A plataforma permite a interação social por meio de postagens e amizades, ofer
    Abra seu terminal git NACH e execute o seguinte comando para clonar o repositório:
 
 
+Desemvolvido por: João Arthur dos Santos 
+TDESI 2024/1 N1
    
