@@ -7,7 +7,7 @@ import java.util.List;
 public class Post {
 
     private Integer id;
-    private List<Usuario> autor;
+    private Usuario autor;
     private String conteudo;
 
     private LocalDateTime dataPublicacao;
@@ -16,13 +16,10 @@ public class Post {
 
     private List<Comentario> comentarios;
 
-    public Post(Integer id, List<Usuario> autor, String conteudo, LocalDateTime dataPublicacao, List<Usuario> curtidas, List<Comentario> comentarios) {
+    public Post(Integer id, Usuario autor, String conteudo) {
         this.id = id;
         this.autor = autor;
         this.conteudo = conteudo;
-        this.dataPublicacao = dataPublicacao;
-        this.curtidas = new ArrayList();
-        this.comentarios = new ArrayList();
     }
 
     public Integer getId() {
@@ -33,11 +30,11 @@ public class Post {
         this.id = id;
     }
 
-    public List<Usuario> getAutor() {
+    public Usuario getAutor() {
         return autor;
     }
 
-    public void setAutor(List<Usuario> autor) {
+    public void setAutor(Usuario autor) {
         this.autor = autor;
     }
 

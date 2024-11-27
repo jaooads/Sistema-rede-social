@@ -8,7 +8,20 @@ import java.util.stream.Collectors;
 
 public class GerenciadorUsuarios {
 
+    public GerenciadorUsuarios() {
+        this.usuarios = new ArrayList<>();
+    }
+
     private List<Usuario> usuarios;
+
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
 
     public void cadastrar(Usuario usuario) {
         if (usuario != null && validarUsuario(usuario)) {

@@ -17,14 +17,19 @@ public class Usuario {
     private List<Usuario> amigos;
     private List<Post> posts;
 
-    public Usuario(String nome, String username, String email, String senha, LocalDateTime dataCadastro, List<Usuario> amigos, List<Post> posts) {
+    public Usuario(String nome, String username, String email, String senha) {
         this.nome = nome;
         this.username = username;
         this.email = email;
         this.senha = senha;
-        this.dataCadastro = dataCadastro;
-        this.amigos =  new ArrayList();
-        this.posts =  new ArrayList();
+    }
+
+    public void setAmigos(List<Usuario> amigos) {
+        this.amigos = amigos;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     public Integer getId() {
@@ -51,14 +56,6 @@ public class Usuario {
         return dataCadastro;
     }
 
-    public List<Usuario> getAmigos() {
-        return amigos;
-    }
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -83,12 +80,12 @@ public class Usuario {
         this.dataCadastro = dataCadastro;
     }
 
-    public void setAmigos(List<Usuario> amigos) {
-        this.amigos = amigos;
+    public List<Usuario> getAmigos() {
+        return amigos;
     }
 
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
+    public List<Post> getPosts() {
+        return posts;
     }
 
     @Override
@@ -101,7 +98,7 @@ public class Usuario {
                 "Senha: " + senha + '\'' +
                 "DataCadastro: " + dataCadastro +
                 "Amigos: " + amigos +
-                "Posts: " + posts ;
+                "Posts: " + posts;
     }
 
     @Override
@@ -116,16 +113,18 @@ public class Usuario {
         return Objects.hash(getId(), getNome(), getUsername(), getEmail(), getSenha(), getDataCadastro(), getAmigos(), getPosts());
     }
 
-    public boolean  adicionarAmigo  (Usuario amigo)  {
-        if(!amigos.contains(amigo)) {
+    public boolean adicionarAmigo(Usuario amigo) {
+        if (!amigos.contains(amigo)) {
             amigos.add(amigo);
             return true;
         }
         return false;
-    };
+    }
+
+    ;
 
     public boolean removerAmigo(Usuario amigo) {
-        if(amigos.contains(amigo)) {
+        if (amigos.contains(amigo)) {
             amigos.remove(amigo);
             return true;
         }
@@ -134,14 +133,14 @@ public class Usuario {
 
     public boolean adicionarPost(Post post) {
 
-    if(post == null) {
-      return false;
-    }
-    return  posts.add(post);
+        if (post == null) {
+            return false;
+        }
+        return posts.add(post);
 
     }
-    
-    private boolean validarUsuario(Usuario usuario)  {
+
+    private boolean validarUsuario(Usuario usuario) {
 
         return usuario.getNome() != null && !usuario.getNome().isEmpty() &&
                 usuario.getUsername() != null && !usuario.getUsername().isEmpty() &&
